@@ -25,13 +25,11 @@ Then select and open lab08-linq.
 ## To Run This Program
 Open the program using Visual Studio and click "Start" button to run this program.
 
+## Resource
+Read JSON to file:
+https://www.newtonsoft.com/json/help/html/DeserializeWithJsonSerializerFromFile.htm
+
 ## Visuals
-
-Unified Modeling Language
-
-This drawing illustrates the inheritance layers of each class and their properties and methods. 
-
-![Alt execution capture](/)
 
 Application Execution
 
@@ -43,4 +41,4 @@ Application Execution
 
 1.2: Create classes for json data and add constructor functions. - 2019 Oct 24
 
-1.3: 
+1.3: Add codes to read json file and use deserializer to convert data into object. - 2019 Oct 24
