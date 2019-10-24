@@ -40,3 +40,7 @@ Application Execution
 ## Change Log
 
 1.1: Set up the program and added json file containing data. - 2019 Oct 24
+
+1.2: Create classes for json data and add constructor functions. - 2019 Oct 24
+
+1.3: 
