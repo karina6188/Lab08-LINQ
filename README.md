@@ -33,7 +33,7 @@ https://www.newtonsoft.com/json/help/html/DeserializeWithJsonSerializerFromFile.
 
 Application Execution
 
-![Alt execution capture](/captures/app_execution.JPG)
+![Alt execution capture](/captures/app_execution2.JPG)
 
 ## Change Log
 
