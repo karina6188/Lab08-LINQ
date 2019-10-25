@@ -42,3 +42,5 @@ Application Execution
 1.2: Create classes for json data and add constructor functions. - 2019 Oct 24
 
 1.3: Add codes to read json file and use deserializer to convert data into object. - 2019 Oct 24
+
+1.4: Write a method called AllNeighborhoods() to count how many neighborhoods are in the data. - 2019 Oct 24
