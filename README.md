@@ -33,7 +33,7 @@ https://www.newtonsoft.com/json/help/html/DeserializeWithJsonSerializerFromFile.
 
 Application Execution
 
-![Alt execution capture](/)
+![Alt execution capture](/captures/app_execution.JPG)
 
 ## Change Log
 
@@ -49,4 +49,4 @@ Application Execution
 
 1.6: Add UniqueNeighborhoods() method to return the numbers of neighborhoods that are not duplicated. - 2019 Oct 24
 
-1.7: 
+1.7: Add OneSingleQuery() and OpposingMethod() methods. - 2019 Oct 24
