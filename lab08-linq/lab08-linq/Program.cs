@@ -26,7 +26,7 @@ namespace lab08_linq
             Console.WriteLine($"2. Filter out all the neighborhoods that do not have any names: {NeighborhoodsHaveNames()}");
             Console.WriteLine($"3. Remove the duplicates: {UniqueNeighborhoods()}");
             Console.WriteLine($"4. Rewrite the queries from above and consolidate all into one single query: {OneSingleQuery()}");
-            Console.WriteLine($"5. Rewrite question 3) using the opposing method: {OpposingMethod()}");
+            Console.WriteLine($"5. Rewrite question 1) using the opposing method: {OpposingMethod()}");
         }
 
         public static int AllNeighborhoods()
@@ -68,7 +68,7 @@ namespace lab08_linq
 
         public static int OpposingMethod()
         {
-            int result = DataCollection.features.Select(data => data.Properties.Neighborhood != "").Distinct().Count();
+            int result = DataCollection.features.Select(data => data.Properties.Neighborhood != "").Count();
             return result;
         }
     }
