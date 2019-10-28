@@ -31,9 +31,25 @@ https://www.newtonsoft.com/json/help/html/DeserializeWithJsonSerializerFromFile.
 
 ## Visuals
 
-Application Execution
+Application Execution - Query all neighborhoods in the data file
+
+![Alt execution capture](/captures/app_execution1.JPG)
+
+Application Execution - Query neighborhoods that have names
 
 ![Alt execution capture](/captures/app_execution2.JPG)
+
+Application Execution - Query neighborhoods without duplicates and sorted alphabetically
+
+![Alt execution capture](/captures/app_execution3.JPG)
+
+Application Execution - Use one single query to get all the results from above 3 queries
+
+![Alt execution capture](/captures/app_execution4.JPG)
+
+Application Execution - Use a LINQ query instead of a LINQ method to get all neighborhoods from the data file
+
+![Alt execution capture](/captures/app_execution5.JPG)
 
 ## Change Log
 
@@ -43,10 +59,12 @@ Application Execution
 
 1.3: Add codes to read json file and use deserializer to convert data into object. - 2019 Oct 24
 
-1.4: Write a method called AllNeighborhoods() to count how many neighborhoods are in the data. - 2019 Oct 24
+1.4: Write a method called AllNeighborhoods() to query all neighborhoods are in the data. - 2019 Oct 24
 
-1.5: Write a method called NeighborhoodsHaveName() to get the numbers of neighborhoods that have names. - 2019 Oct 24
+1.5: Write a method called NeighborhoodsHaveName() to query neighborhoods that have names. - 2019 Oct 24
 
-1.6: Add UniqueNeighborhoods() method to return the numbers of neighborhoods that are not duplicated. - 2019 Oct 24
+1.6: Add UniqueNeighborhoods() method to query neighborhoods that are not duplicated. - 2019 Oct 24
 
 1.7: Add OneSingleQuery() and OpposingMethod() methods. - 2019 Oct 24
+
+1.8: All the data results are successfully queried and printed to the console window. The program is completed. - 2019 Oct 28
