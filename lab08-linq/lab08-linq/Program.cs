@@ -23,53 +23,87 @@ namespace lab08_linq
 
             Console.WriteLine("Below are the data results queried by LINQ: ");
             Console.WriteLine($"1. Output all of the neighborhoods in this data list: {AllNeighborhoods()}");
-            Console.WriteLine($"2. Filter out all the neighborhoods that do not have any names: {NeighborhoodsHaveNames()}");
-            Console.WriteLine($"3. Remove the duplicates: {UniqueNeighborhoods()}");
+            Console.WriteLine($"Total of 147 neighborhood");
+            Console.WriteLine("");
+            Console.WriteLine($"2. Filter out all the neighborhoods that do not have names: {NeighborhoodsHaveNames()}");
+            Console.WriteLine($"Total of 143 neighborhood");
+            Console.WriteLine("");
+            Console.WriteLine($"3. Remove the duplicates and sort the neiborhoods alphabetically: {UniqueNeighborhoods()}");
+            Console.WriteLine($"Total of 39 neighborhood");
+            Console.WriteLine("");
             Console.WriteLine($"4. Rewrite the queries from above and consolidate all into one single query: {OneSingleQuery()}");
+            Console.WriteLine("\n");
             Console.WriteLine($"5. Rewrite question 1) using the opposing method: {OpposingMethod()}");
         }
 
-        public static int AllNeighborhoods()
+        public static string AllNeighborhoods()
         {
+            IEnumerable<string> results = DataCollection.features
+                            .Select(data => data.Properties.Neighborhood);
             int counter = 0;
-            var results = DataCollection.features;
-            foreach (var result in results)
+            string printData = "";
+            foreach (var data in results)
             {
+                printData += "\n" + data.ToString() + ", ";
                 counter++;
             }
-            return counter;
+            return printData;
         }
 
-        public static int NeighborhoodsHaveNames()
+        public static string NeighborhoodsHaveNames()
         {
-            int counter = DataCollection.features
+            IEnumerable<string> results = DataCollection.features
                            .Where(data => data.Properties.Neighborhood != "")
-                           .Select(data => data.Properties.Neighborhood).Count();
-            return counter;
+                           .Select(data => data.Properties.Neighborhood);
+            int counter = 0;
+            string printData = "";
+            foreach (var data in results)
+            {
+                printData += "\n" + data.ToString() + ", ";
+                counter++;
+            }
+            return printData;
         }
 
-        public static int UniqueNeighborhoods()
+        public static string UniqueNeighborhoods()
         {
-            int counter = DataCollection.features
+            IEnumerable<string> results = DataCollection.features
                            .Where(data => data.Properties.Neighborhood != "")
+                           .OrderBy(data => data.Properties.Neighborhood)
                            .Select(data => data.Properties.Neighborhood)
-                           .Distinct().Count();
-            return counter;
+                           .Distinct();
+            int counter = 0;
+            string printData = "";
+            foreach (var data in results)
+            {
+                printData += "\n" + data.ToString() + ", ";
+                counter++;
+            }
+            return printData;
         }
 
         public static string OneSingleQuery()
         {
-            int q1 = AllNeighborhoods();
-            int q2 = NeighborhoodsHaveNames();
-            int q3 = UniqueNeighborhoods();
-            string answersInString = $"[{q1}, {q2}, {q3}]";
+            string q1 = AllNeighborhoods();
+            string q2 = NeighborhoodsHaveNames();
+            string q3 = UniqueNeighborhoods();
+            string answersInString = $"\n [1. All neiborhoods: {q1} \n\n 2. Neiborhoods have names: {q2} \n\n 3. Neiborhoods without duplicates: {q3}]";
             return answersInString;
         }
 
-        public static int OpposingMethod()
+        public static string OpposingMethod()
         {
-            int result = DataCollection.features.Select(data => data.Properties.Neighborhood != "").Count();
-            return result;
+            var result = from data in DataCollection.features
+                                         where data.Properties.Neighborhood != ""
+                                         select data.Properties.Neighborhood;
+            int counter = 0;
+            string printData = "";
+            foreach (var data in result)
+            {
+                printData += "\n" + data.ToString() + ", ";
+                counter++;
+            }
+            return printData;
         }
     }
 }
