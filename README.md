@@ -11,7 +11,7 @@ This program demonstrates how to use LINQ to get and transform data using query 
 ## Getting Started
 Clone this repository to your local machine.
 
-$ git clone [https://github.com/karina6188/Lab05-OOP-Principles.git]
+$ git clone [https://github.com/karina6188/Lab08-LINQ.git]
 
 To run the program from Visual Studio:
 Select File -> Open -> Project/Solution
